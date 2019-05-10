@@ -210,7 +210,7 @@ export default class Query<TData = any, TVariables = OperationVariables> extends
 
     this.updateQuery(nextProps);
     if (nextProps.skip) return;
-    this.startQuerySubscription();
+    this.resubscribeToQuery();
   }
 
   componentWillUnmount() {
